@@ -47,6 +47,15 @@ npm test
 - **DELETE** `http://localhost:3001/posts/123`
 - Header: `Authorization: Bearer <token>`
 
+## API Authentication Flow
+- Both admin and user login APIs return a JWT token upon successful authentication.
+- Use the returned token as a Bearer token in the Authorization header when calling protected endpoints, such as the DELETE API.
+
+Example:
+1. Login as admin or user to receive a token.
+2. Use the token in requests to protected endpoints:
+   - Header: `Authorization: Bearer <token>`
+
 ## Project Structure
 ```
 src/
