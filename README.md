@@ -1,8 +1,8 @@
 # NESL-IT API
-
+#API FOLDER
 A minimal Express + TypeScript API with JWT authentication and role-based authorization.
 
-## Features
+# Api Folder: Express app
 - **POST /login**: Returns a signed JWT for hardcoded users (admin/user)
 - **DELETE /posts/:id**: Protected endpoint, only accessible by admin
 - Custom `authorize(roles: string[])` middleware for role-based access
@@ -64,7 +64,7 @@ src/
 ## Environment
 - JWT secret defaults to `supersecretkey` (set `JWT_SECRET` in env for production)
 
-## Web Folder: React Frontend
+# Web Folder: React Frontend
 
 The `web/ReactFeed` folder contains the frontend code for the React Feed application.
 
@@ -72,8 +72,14 @@ The `web/ReactFeed` folder contains the frontend code for the React Feed applica
 
 To start the frontend development server, navigate to the `web/ReactFeed` directory and run:
 
-```bash
-yarn dev
+### 1. Install dependencies
+```sh
+npm install
+```
+
+### 2. Run the APP
+```sh
+npm run dev
 ```
 
 ### Environment Setup
@@ -86,14 +92,14 @@ VITE_API_URL=http://localhost:3001
 
 If `VITE_API_URL` is not set, the frontend will default to `http://localhost:3001` as the backend URL.
 
-## DB Folder Structure
+# DB Folder Structure
 
 The `db` folder contains:
 - `pipeline/`: Contains pipeline-related scripts.
 - `SchemaDesign/`: Contains schema design files, including `SchemaDesign.json`.
 - `performance.txt`: Contains suggestions to improve database performance.
 
-## Debug Folder
+# Debug Folder
 
 The `debug` folder contains `postControllerFix.ts`, which documents problem identification in the provided code snippet, offers improvement suggestions, and includes the improved code.
 
