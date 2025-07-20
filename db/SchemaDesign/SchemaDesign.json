@@ -1,0 +1,26 @@
+{
+  "users": {
+    "_id": "ObjectId",
+    "name": "String",
+    "joined": "ISODate"
+  },
+  "follows": {
+    "_id": "ObjectId",
+    "followerId": "ObjectId",     // references users._id
+    "followingId": "ObjectId"     // references users._id
+  },
+  "follows_indexes": [
+    { "followerId": 1 },
+    { "followingId": 1 }
+  ],
+  "posts": {
+    "_id": "ObjectId",
+    "authorId": "ObjectId",       // references users._id
+    "content": "String",
+    "createdAt": "ISODate"
+  },
+  "posts_indexes": [
+    { "createdAt": -1 },
+    { "authorId": 1, "createdAt": -1 }
+  ]
+}

@@ -1,0 +1,4 @@
+To ensure fast read performance, I will index the follows collection on both followerId and followingId 
+so we can quickly look up who a user is following or who follows them. For the posts collection,
+I will use a compound index on authorId and createdAt (in descending order) to efficiently retrieve 
+posts from specific users in reverse-chronological order, which is ideal for feeds and timelines

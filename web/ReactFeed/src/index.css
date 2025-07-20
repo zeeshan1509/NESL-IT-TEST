@@ -1,0 +1,9 @@
+@import "tailwindcss";
+ 
+
+body {
+  min-height: 100vh;
+ 
+  background: linear-gradient(135deg, #213547 100%, #213547 100%);
+  /* Optional: add a subtle pattern or overlay for more glass effect */
+}
